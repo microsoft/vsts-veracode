@@ -1,0 +1,106 @@
+{
+  "id": "6292a058-d4f5-407b-b6c6-815df9ee59d6",
+  "name": "Veracode",
+  "friendlyName": "ms-resource:loc.friendlyName",
+  "description": "ms-resource:loc.description",
+  "helpMarkDown": "ms-resource:loc.helpMarkDown",
+  "category": "Build",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "author": "Microsoft",
+  "demands": [
+    "java"
+  ],
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "instanceNameFormat": "ms-resource:loc.instanceNameFormat",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "ms-resource:loc.group.displayName.advanced",
+      "isExpanded": false
+    }
+  ],
+  "inputs": [
+    {
+      "name": "filepath",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.filepath",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.filepath"
+    },
+    {
+      "name": "veracodeAppProfile",
+      "type": "string",
+      "required": true,
+      "label": "ms-resource:loc.input.label.veracodeAppProfile",
+      "helpMarkDown": "ms-resource:loc.input.help.veracodeAppProfile"
+    },
+    {
+      "name": "createProfile",
+      "type": "boolean",
+      "required": true,
+      "defaultValue": true,
+      "label": "ms-resource:loc.input.label.createProfile",
+      "helpMarkDown": "ms-resource:loc.input.help.createProfile"
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "required": true,
+      "label": "ms-resource:loc.input.label.version",
+      "defaultValue": "$(build.buildNumber)",
+      "helpMarkDown": "ms-resource:loc.input.help.version"
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.username",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.username"
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.password",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.password"
+    },
+    {
+      "name": "sandboxId",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.sandboxId",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.sandboxId",
+      "groupName": "advanced"
+    },
+    {
+      "name": "optargs",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.optargs",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.optargs",
+      "groupName": "advanced"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "veracode.js",
+      "argumentFormat": ""
+    },
+    "PowerShell": {
+      "target": "$(currentDirectory)\\veracode.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)",
+      "platforms": [
+        "windows"
+      ]
+    }
+  }
+}

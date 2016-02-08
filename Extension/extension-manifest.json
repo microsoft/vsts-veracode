@@ -1,0 +1,34 @@
+{
+    "manifestVersion": 1,
+    "id": "veracode-scanner-build-extension",
+    "name": "Veracode",
+    "version": "1.0.0",
+    "publisher": "MicrosoftJavaAlm",
+    "description": "Veracode security scanning extension.",
+    "categories": [
+        "Build and release"
+    ],
+    "targets":[
+        { "id":"Microsoft.VisualStudio.Services" }
+    ],
+    "icons": {
+        "default": "extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "Veracode"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "veracode-scanner-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Veracode"
+            }
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "loc.friendlyName": "Veracode Security Scanning",
+  "loc.helpMarkDown": "[Veracode](http://www.veracode.com)",
+  "loc.description": "Scan code for security vulnerabilities with Veracode",
+  "loc.instanceNameFormat": "Upload and scan $(filepath)",
+  "loc.group.displayName.advanced": "Advanced",
+  "loc.input.label.filepath": "File Path",
+  "loc.input.help.filepath": "-filepath option. Filepath or folderpath of the file or directory to upload.",
+  "loc.input.label.veracodeAppProfile": "Veracode Application Name",
+  "loc.input.help.veracodeAppProfile": "-appname option. Veracode Application name.",
+  "loc.input.label.createProfile": "Create Application Profile",
+  "loc.input.help.createProfile": "-createprofile option. True to create a new application profile.",
+  "loc.input.label.version": "Version",
+  "loc.input.help.version": "-version option. The name or version number of the new or updated build.",
+  "loc.input.label.username": "Username",
+  "loc.input.help.username": "-vuser option.",
+  "loc.input.label.password": "Password",
+  "loc.input.help.password": "-vpassword option.",
+  "loc.input.label.sandboxId": "Sandbox id",
+  "loc.input.help.sandboxId": "-sandboxid option.",
+  "loc.input.label.optargs": "Optional Arguments",
+  "loc.input.help.optargs": "Any additional options specified here will be passed to the Veracode API Wrapper."
+}
