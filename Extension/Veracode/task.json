@@ -93,12 +93,6 @@
         "Node": {
             "target": "veracode.js",
             "argumentFormat": ""
-        },
-        "PowerShell": {
-            "target": "$(currentDirectory)\\veracode.ps1",
-            "argumentFormat": "",
-            "workingDirectory": "$(currentDirectory)",
-            "platforms": ["windows"]
         }
     }
 }
